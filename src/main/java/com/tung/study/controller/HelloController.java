@@ -15,6 +15,7 @@ public class HelloController {
 
     @RequestMapping(value = "/selByUserId", method = RequestMethod.POST)
     public ResultVO selByUserId(@RequestBody User user) {
+
         return userServcie.selByUserId(user);
     }
 
