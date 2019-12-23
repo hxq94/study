@@ -1,17 +1,18 @@
-package com.tung.study.controller;
+package com.tung.study.controller.user;
 
 
 import com.tung.study.model.User;
-import com.tung.study.service.UserServcie;
+import com.tung.study.service.UserService;
 import com.tung.study.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class HelloController {
+@RequestMapping(value = "/user")
+public class UserController {
 
     @Autowired
-    UserServcie userServcie;
+    UserService userServcie;
 
     @RequestMapping(value = "/selByUserId", method = RequestMethod.POST)
     public ResultVO selByUserId(@RequestBody User user) {
